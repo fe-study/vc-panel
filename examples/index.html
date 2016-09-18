@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+        <title>demo - vc-panel</title>
+        <style>
+            ::-webkit-scrollbar {
+                width: 8px;
+                height: 8px;
+            }
+            ::-webkit-scrollbar-thumb {
+                box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+                border-radius: 4px;
+                background: rgba(119, 129, 149, 0.8);
+            }
+            html, body {
+                background-color: whiteSmoke;
+            }
+            .container label {
+                font-weight: normal;
+            }
+            .btn {
+                margin-right: 20px;
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center">@Vue Component - vc-panel</h1>
+        <div class="text-center">Bootstra panel component</div>
+        <a style="display: block" class="text-center" href="https://github.com/iwaimai-bi-fe/vc-panel">view on Github</a>
+        <hr>
+
+        <div id="app" class="container">
+
+            <button class="btn btn-success btn-sm" @click="success">success</button>
+            <button class="btn btn-danger btn-sm" @click="danger">danger</button>
+            <button class="btn btn-warning btn-sm" @click="warning">warning</button>
+            <br>
+
+            <vc-panel
+                :title="title"
+                :sub-title="subTitle"
+                :info="info"
+                :type="type"
+            >
+                <div>panel content body</div>
+            </vc-panel>
+
+            <div class="form-group" style="margin-top: 20px;">
+                <label>配置组件的title属性</label>
+                <input type="text" class="form-control" placeholder="title" v-model="title" />
+            </div>
+
+            <div class="form-group">
+                <label>配置组件的subTitle属性</label>
+                <input type="text" class="form-control" placeholder="subTitle" v-model="subTitle" />
+            </div>
+
+            <div class="form-group">
+                <label>配置组件的info属性</label>
+                <input type="text" class="form-control" placeholder="info" v-model="info" />
+            </div>
+
+            <div class="form-group">
+                <div>配置组件的type</div>
+                <label><input type="radio" value="warning" name="type" v-model="type">warning</label>
+                <label><input type="radio" value="danger" name="type" v-model="type">danger</label>
+                <label><input type="radio" value="success" name="type" v-model="type">success</label>
+                <label><input type="radio" value="info" name="type" v-model="type">info</label>
+            </div>
+
+        </div>
+        <script src='../dist/example.js'></script>
+    </body>
+</html>

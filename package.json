@@ -1,7 +1,7 @@
 {
   "author": "indexxuan@gmail.com",
   "name": "vc-panel",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "panel component by bootstrap & vue.js",
   "scripts": {
     "start": "webpack-dev-server --inline --hot --quiet",

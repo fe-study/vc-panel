@@ -3,7 +3,7 @@
         <div class="panel-header">
             <div class="title-area pull-left">
                 <slot name="title"><h2 class="title" :class="[ bColor ]">{{ title }}</h2></slot>
-                <slot name="subTitle"><h3 class="sub-title">{{ subTitle }}</h2></slot>
+                <slot name="sub-title"><h3 class="sub-title">{{ subTitle }}</h2></slot>
             </div>
             <slot name="info"><div class="info pull-right">{{ info }}</div></slot>
         </div>
@@ -75,6 +75,7 @@
 
 <script>
 export default {
+    name: 'vc-panel',
     props: {
         title: String,
         subTitle: String,

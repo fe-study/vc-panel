@@ -10695,7 +10695,7 @@ module.exports = function() {
 /* 8 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"vc-panel-component\">\n        <div class=\"panel-header\">\n            <div class=\"title-area pull-left\">\n                <slot name=\"title\"><h2 class=\"title\" :class=\"[ bColor ]\">{{ title }}</h2></slot>\n                <slot name=\"subTitle\"><h3 class=\"sub-title\">{{ subTitle }}</h2></slot>\n            </div>\n            <slot name=\"info\"><div class=\"info pull-right\">{{ info }}</div></slot>\n        </div>\n        <div class=\"panel-body\">\n            <slot></slot>\n        </div>\n    </div>";
+module.exports = "<div class=\"vc-panel-component\">\n        <div class=\"panel-header\">\n            <div class=\"title-area pull-left\">\n                <slot name=\"title\"><h2 class=\"title\" :class=\"[ bColor ]\">{{ title }}</h2></slot>\n                <slot name=\"sub-title\"><h3 class=\"sub-title\">{{ subTitle }}</h2></slot>\n            </div>\n            <slot name=\"info\"><div class=\"info pull-right\">{{ info }}</div></slot>\n        </div>\n        <div class=\"panel-body\">\n            <slot></slot>\n        </div>\n    </div>";
 
 /***/ },
 /* 9 */
@@ -10737,7 +10737,7 @@ Object.defineProperty(exports, "__esModule", {
 //         <div class="panel-header">
 //             <div class="title-area pull-left">
 //                 <slot name="title"><h2 class="title" :class="[ bColor ]">{{ title }}</h2></slot>
-//                 <slot name="subTitle"><h3 class="sub-title">{{ subTitle }}</h2></slot>
+//                 <slot name="sub-title"><h3 class="sub-title">{{ subTitle }}</h2></slot>
 //             </div>
 //             <slot name="info"><div class="info pull-right">{{ info }}</div></slot>
 //         </div>
@@ -10809,6 +10809,7 @@ Object.defineProperty(exports, "__esModule", {
 
 // <script>
 exports.default = {
+    name: 'vc-panel',
     props: {
         title: String,
         subTitle: String,
